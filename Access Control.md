@@ -56,7 +56,7 @@ X-Original-URL: /admin/action
 
 ```
 # HTTP-Method based controls 
-- This can be done manually or Burp Suites tool "Change request method"
+- This can be done manually or using Burp Suite's tool "Change request method"
 - FROM
 ```http
 POST /admin-roles HTTP/2
