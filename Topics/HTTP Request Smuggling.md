@@ -67,7 +67,7 @@ Transfer-Encoding: chunked
 \r\n
 X
 ```
-![requestSmugglingTests](Screenshots/requestSmugglingTests.png)
+![](/Images/requestSmugglingTests.png)
 CL.TE - Using custom header to append the next request to it
 ```html
 POST / HTTP/1.1\r\n
