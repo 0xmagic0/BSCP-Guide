@@ -1,10 +1,10 @@
 # Resources
-[Host Header Attacks Playlist - Michael Sommer](https://www.youtube.com/playlist?list=PL0W_QjMcqdSB6eYrOrzKsPSede42nWpN3)
+- [Host Header Attacks Playlist - Michael Sommer](https://www.youtube.com/playlist?list=PL0W_QjMcqdSB6eYrOrzKsPSede42nWpN3)
 # Burp Extension
-Param Miner "Guess headers" function to probe for supported headers
+- Param Miner "Guess headers" function to probe for supported headers
 # Detection
-Check if the host header can be manipulated and how it is being interpreted.
-There are different attack vectors to explore.
+- Check if the host header can be manipulated and how it is being interpreted.
+- There are different attack vectors to explore.
 ## Supply an arbitrary host header
 ```http
 From
@@ -55,7 +55,7 @@ GET /example HTTP/1.1
 Host: vulnerable-website.com
 ```
 ## Inject host override headers
-Use Param Miner "Guess headers" function to probe for supported headers
+- Use Param Miner "Guess headers" function to probe for supported headers
 ```http
 GET /example HTTP/1.1
 Host: vulnerable-website.com
