@@ -1,7 +1,14 @@
 # BSCP-Guide
-Burp Suite Certified Practitioner Guide
+Burp Suite Certified Practitioner Guide.
 
 ## [Exam-Quick-Checklist](/Exam-Quick-Checklist.md)
+- Reconnaissance checklist to aid in the discovery phase and provide guidance while determining an exploitation method.
+- Each Topic has the following entries:
+    - Name
+    - Objective
+    - Most Probable Exam Stages to Find This Vulnerability
+    - Reconnaissance - Where to look for it
+    - Reconnaissance - Determine the type
 
 ## [Topics](/Topics)
 - [Access Control](/Topics/Access%20Control.md)
