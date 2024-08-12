@@ -9,8 +9,7 @@
 # Context
 - Plaintext context
 - Code context
-# Reconnaissance - Where to find
-# Methodology
+# Reconnaissance Methodology - How to find it
 - Look for user controlled input that is reflected
 - Enumerate the template engine being used by testing with multiple payloads
 - If the previous step didn't work, try to trigger an error that discloses useful information
