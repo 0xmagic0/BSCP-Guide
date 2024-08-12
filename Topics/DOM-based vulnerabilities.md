@@ -4,11 +4,11 @@
 # Reconnaissance - Where to look for it
 - Look for event listeners in the page source and other files
 # Document Object Model (DOM) vulnerabilities
-When JavaScript takes user-controlled data from a source and passes it into a sink handling it in an unsafe manner
-This would allow the attacker to perform malicious actions
+- When JavaScript takes user-controlled data from a source and passes it into a sink handling it in an unsafe manner
+- This would allow the attacker to perform malicious actions
 ## Sources
-A JavaScript property that accepts user-controlled data
-Examples:
+- A JavaScript property that accepts user-controlled data
+- Examples:
 ```js
 location.search
 document.referrer
@@ -30,8 +30,8 @@ Reflected data
 Web messages
 ```
 ## Sink
-JavaScript function or DOM object that can trigger an dangerous behavior if user-controlled data is passed into it
-Examples:
+- JavaScript function or DOM object that can trigger an dangerous behavior if user-controlled data is passed into it
+- Examples:
 ```js
 eval()
 document.body.innerHTML()
@@ -53,10 +53,10 @@ RegExp()
 ```
 # Vulnerabilities
 - Open redirect
-Review the server response, DOM, and other loaded files
-Check how the webpage is doing cross-page/cross-domain navigation and see if this can be manipulated with user supplied input
+    - Review the server response, DOM, and other loaded files
+    - Check how the webpage is doing cross-page/cross-domain navigation and see if this can be manipulated with user supplied input
 - Cookie manipulation
-Observe if any cookie is somehow taking user-controlled data and reflecting it
+    - Observe if any cookie is somehow taking user-controlled data and reflecting it
 ```html
 <iframe src="domain?parameters&payload" width="800" height="800" onload='if(!window.x)this.src="domain";window.x=1;'></iframe>
 ```
