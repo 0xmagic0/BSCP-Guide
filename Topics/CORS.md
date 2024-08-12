@@ -3,21 +3,21 @@
 - [Portswigger Academy](https://portswigger.net/web-security/cors)
 
 # CORS headers
-`Access-Control-Allow-Origin` header: Specifies if the origin is allowed to access the resources of the website. Only access public pages.
-The values could be:
+- `Access-Control-Allow-Origin` header: Specifies if the origin is allowed to access the resources of the website. Only access public pages.
+- The values could be:
 ```
 *
 <origin>
 null
 ```
-Each with its security implications
-`Access-Control-Allow-Credentials: true` Allow authenticated pages
-Note: if`Access-Control-Allow-Origin` is set to `*` then the `Access-Control-Allow-Credentials` header is not allowed
+- Each with its security implications
+- `Access-Control-Allow-Credentials: true` Allow authenticated pages
+- Note: if`Access-Control-Allow-Origin` is set to `*` then the `Access-Control-Allow-Credentials` header is not allowed
 
 # CORS Vulnerabilities
-The Access-Control-Allow-Origin header only allows to whitelist one origin, this is a limitation that developers need to circumvent
-They use `dynamic generation` to address this limitation
-The logic of how an origin is decided to be trusted is what causes the misconfigurations
+- The Access-Control-Allow-Origin header only allows to whitelist one origin, this is a limitation that developers need to circumvent
+- They use `dynamic generation` to address this limitation
+- The logic of how an origin is decided to be trusted is what causes the misconfigurations
 ## Testing Methodology
 - Look at server responses and check for "Access-Control-Allow-Origin" or "Access-Control-Allow-Credentials"
 - Add or change the origin header to set the current host as a subdomain of an attacker controlled domain "current-host.net.attacker-site.com" and observe the server response
