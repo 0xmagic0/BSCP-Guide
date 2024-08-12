@@ -32,7 +32,7 @@ Use context-specific approaches:
     - Plaintext context
     - Code context
 ## Identify
-![SSTI Payload Tests](Screenshots/SSTIPayloadTests.png)
+![](/Images/SSTIPayloadTests.png)
 - Make the application generate an error. This may disclose useful information to enumerate the template engine being used
 # Some Payloads
 ## Craft payload
