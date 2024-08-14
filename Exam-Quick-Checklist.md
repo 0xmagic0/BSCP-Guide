@@ -33,11 +33,15 @@
 
 # Quick recon
 - Start an active scan on interesting requests
-- Start a scan at a custom insertion point
+- Run scans on selected insertion points
+    - URL parameters
+    - cookies
+    - JSON body parameters
 - Use the HTTP Request Smuggling Probe
 - Use Param Miner to Probe for different vulnerabilities
     - Web Cache Poisoning
     - Host header injection
+- Use payloads provided by Portswigger academy and other online resources to speed up the process
 # Essential Skills
 ### Objective
 - Quickly detect potential vulnerabilities
