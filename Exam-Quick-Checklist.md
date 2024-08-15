@@ -121,6 +121,7 @@
 - Stage 1 or 2
 ### Reconnaissance - Where to look for it
 - Pages where account sensitive operations are performed
+    - change email
 - Pages where the user might disclose sensitive information
 ### Reconnaissance - Determine the type
 - CSRF token bypass
