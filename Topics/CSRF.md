@@ -45,7 +45,7 @@ Bypass when SameSite is set on Cookies: Use GET method as the cookie won't be se
     </script>
     ```
     - Use an open redirect and a path traversal to craft the GET request CSRF payload
-- SameSite Strict Bypass via sibling domain (Also involves Cross-site WebSocket hijacking (CSWSH):
+- SameSite Strict Bypass via sibling domain Also involves Cross-site WebSocket hijacking (CSWSH):
     - Other sibling domains that are vulnerable to XSS might be used to deliver the payload to the malicious CSRF request
     - Check in the HTTP requests for disclosure of sibling domains: E.g.: In the server response headers or body
     - Trigger a redirection with `document.location` to the xss vulnerable sibling domain
@@ -59,7 +59,8 @@ Bypass when SameSite is set on Cookies: Use GET method as the cookie won't be se
 - Validation depends on the header being present:
     - Craft a CSRF PoC that causes the browser to drop the Referer header, to accomplish this add `<head><meta name="referrer" content="never"></head>` to the PoC
 - Referer header with broken validation:
-    - Check where the referer header is being validated
-    - It could be a subdomain of a controlled domain or it could be inserted after the query `?` symbol
+    - Check how the referer header is being validated
+    - The expected value could be inserted after the query `?` symbol
+    - The expected value could be a subdomain of an attacker controlled domain
     - Modify the CSRF Poc `history.pushState("", "", "/?expected-value.net")`
-    - Some browsers might strip the query string form the referer header by default .Add `Referrer-Policy: unsafe-url` to the exploit server response to circumvent this issue)
+    - Some browsers might strip the query string form the referer header by default .Add `Referrer-Policy: unsafe-url` to the exploit server response to circumvent this issue
