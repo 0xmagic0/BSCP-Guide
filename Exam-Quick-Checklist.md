@@ -158,6 +158,8 @@
 - Stage 1 or 2
 ### Reconnaissance - Where to look for it
 - Pages where sensitive information could be extracted
+- Find a request disclosing sensitive information
+- Inject the Origin header and start testing different url options
 ### Reconnaissance - Determine the type
 - Subdomain of the current Host
 - Arbitrary URL accepted
