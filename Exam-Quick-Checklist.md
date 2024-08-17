@@ -41,6 +41,9 @@
 - Use Param Miner to Probe for different vulnerabilities
     - Web Cache Poisoning
     - Host header injection
+- From the "Site map" tab use the "Engagement tools" to gather information
+- Follow the information disclosure methodology to find information
+- Use the Developer tools to look for event listeners
 - Use payloads provided by Portswigger academy and other online resources to speed up the process
 # Essential Skills
 ### Objective
