@@ -328,6 +328,7 @@ Request's modifying user information
 - Generate error messages to disclose information
 - Look for developer comments that disclose information
 - Cookies
+- Once serialized data has been found, modify it to see how the server responds
 ### Reconnaissance - Determine the type
 - Modifying object attributes
 - Modifying data types
