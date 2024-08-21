@@ -26,6 +26,10 @@ When an application unintentionally reveals sensitive information to its users
     - Fuzz and enumerate to find them. To read some backup file you could add the tilde `~`
 - Information disclosure due to insecure configuration: Debug mode is enabled, TRACE method is allowed and returns interesting data, etc. There are many examples
 - Version control history: If a .git folder is found, download it and inspect it for secrets
+    - Download folder
+    ```bash
+    wget -r https://url/.git/
+    ```
     - Get status
     ```bash
     git status
