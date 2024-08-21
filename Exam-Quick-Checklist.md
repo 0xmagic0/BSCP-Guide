@@ -109,6 +109,7 @@
 ### Reconnaissance - Where to look for it
 - Any input field that is reflected or stored somewhere
 - Url parameters
+- HTTP headers
 - Form fields
 - Source code: Check server response, Elements tab, Network tab for requests, loaded documents and JS files
 ### Reconnaissance - Determine the type
