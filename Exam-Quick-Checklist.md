@@ -105,7 +105,23 @@
 ### Reconnaissance - Where to look for it
 - Determine HTTP method being used, check for issues (Use HTTP Request Smuggler)
 ### Reconnaissance - Determine the type
-- HTTP/1.1 OR HTTP/2: Check for HTTP issues (Use HTTP Request Smuggler)
+- HTTP/1.1
+    - Bypass front-end security controls - access admin panel
+    - Bypass front-end request rewriting - access admin panel
+        - Look for requests that reflect the user's input
+    - Capturing other users' requests - steal cookies
+        - Look for requests that could be used to append and reflect other users' requests
+    - Deliver XSS
+        - Look for user reflected input (request headers, url parameters, etc)
+    - TE.TE - Obfuscating the TE header
+- Advanced
+    - HTTP/2 downgrades
+        - Response queue poisoning via H2.TE - Extract cookie
+        - H2.CL request smuggling - Deliver XSS
+        - HTTP/2 request smuggling via CRLF injection - steal cookies
+        - HTTP/2 request splitting via CRLF injection - steal cookies
+    - Browser-powered
+        - CL.0 request smuggling - access admin panel
 # Web Cache Poisoning
 ### Objective
 - Poison cache to deliver XSS payloads (observe weird behavior if other headers are added)
