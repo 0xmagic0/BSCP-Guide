@@ -1,5 +1,6 @@
 # Topics
 - [Quick recon](/Exam-Quick-Checklist.md#quick-recon)
+- [Information Disclosure](/Exam-Quick-Checklist.md#information-disclosure)
 - [Essential Skills](/Exam-Quick-Checklist.md#essential-skills)
 - [SQL Injection](/Exam-Quick-Checklist.md#sql-injection)
 - [HTTP request smuggling](/Exam-Quick-Checklist.md#http-request-smuggling)
@@ -19,7 +20,6 @@
 - [Authentication](/Exam-Quick-Checklist.md#authentication)
 - [WebSockets](/Exam-Quick-Checklist.md#websockets)
 - [Insecure Deserialization](/Exam-Quick-Checklist.md#insecure-deserialization)
-- [Information Disclosure](/Exam-Quick-Checklist.md#information-disclosure)
 - [Business Logic](/Exam-Quick-Checklist.md#business-logic)
 - [Host Header attacks](/Exam-Quick-Checklist.md#host-header-attacks)
 - [OAuth authentication](/Exam-Quick-Checklist.md#oauth-authentication)
@@ -45,6 +45,27 @@
 - Follow the information disclosure methodology to find information
 - Use the Developer tools to look for event listeners
 - Use payloads provided by Portswigger academy and other online resources to speed up the process
+# Information Disclosure
+### Objective
+- Gather useful information
+### Most Probable Exam Stages to Find This Vulnerability
+- Stage 1 or 2
+### Reconnaissance - Where to look for it
+- Start with the easiest step = /robots.txt and build up from there
+- Fuzz parameters, directories, HTTP method, etc
+- Burp Scanner
+- Burp engagement tools: Search, Find comments, Discover content
+- Engineering informative responses / Error messages
+- Developer tools
+### Reconnaissance - Determine the type
+- Files for web crawlers: /robots.txt and /sitemap.xml
+- Debug page
+- Backup Files
+- Directory listings
+- Developer comments
+- Error messages
+- Internal headers
+- Git history
 # Essential Skills
 ### Objective
 - Quickly detect potential vulnerabilities
@@ -336,27 +357,6 @@ Request's modifying user information
 - Using application functionality to exploit insecure deserialization
 - Arbitrary object injection
 - Using Pre-built chain tools to exploit magic methods 
-# Information Disclosure
-### Objective
-- Gather useful information
-### Most Probable Exam Stages to Find This Vulnerability
-- Stage 1 or 2
-### Reconnaissance - Where to look for it
-- Start with the easiest step = /robots.txt and build up from there
-- Fuzz parameters, directories, HTTP method, etc
-- Burp Scanner
-- Burp engagement tools: Search, Find comments, Discover content
-- Engineering informative responses / Error messages
-- Developer tools
-### Reconnaissance - Determine the type
-- Files for web crawlers: /robots.txt and /sitemap.xml
-- Debug page
-- Backup Files
-- Directory listings
-- Developer comments
-- Error messages
-- Internal headers
-- Git history
 # Business Logic
 ### Objective
 - Subvert the application logic to elicit malicious actions
