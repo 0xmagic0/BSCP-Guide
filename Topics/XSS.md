@@ -22,6 +22,12 @@
 - Are certain tags or attributes blocked? Use intruder and an XSS cheatsheet to find unblocked tags/attributes
 - Is there any special handling for data? Do urls get turned into links?
 - How are special characters handled? insert '<>:;"\/ to find out if they are being encoded.
+- Where to look:
+    - Any input field that is reflected or stored somewhere
+    - Url parameters
+    - HTTP headers
+    - Form fields
+    - Source code: Check server response, Elements tab, Network tab for requests, loaded documents and JS files
 ```html
 '"<a><<adsa>>\';//
 ```
