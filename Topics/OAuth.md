@@ -12,7 +12,7 @@ Some requests to try to find more information:
 /.well-known/oauth-authorization-server
 /.well-known/openid-configuration
 ```
-- Scope: Defines the data that will be granted accesst to
+- Scope: Defines the data that will be granted access to
 - State parameter: Used to prevent CSRF attacks
 # Vulnerabilities
 - Authentication bypass via OAuth implicit flow
