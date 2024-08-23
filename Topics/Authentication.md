@@ -3,19 +3,19 @@
 - [Authentication Playlist - z3nsh3ll](https://www.youtube.com/playlist?list=PLWvfB8dRFqbbwmsFZg4vEkOxv9KmFCHrJ)
 - [Authentication Playlist - Rana Khalil](https://www.youtube.com/playlist?list=PLuyTk2_mYISIZICCCdK7sLjKN1s1z9OQi)
 # What is authentication
-Verify a user is who they claim to be
-Not to be confused with authorization
-Authorization is verifying whether or not a user is allowed to do something
+- Verify a user is who they claim to be
+- Not to be confused with authorization
+- Authorization is verifying whether or not a user is allowed to do something
 # Password based authentication vulnerabilities
 ## Brute-force attacks
-Use:
-- Generict Wordlists
-- Fine tuned wordlists
-- Logic
-- Public knowledge
-Try to detect patterns in the naming convention of the company email
-Find First and Last names
-Check on the page, HTTP responses
+- Use:
+    - Generict Wordlists
+    - Fine tuned wordlists
+    - Logic
+    - Public knowledge
+- Try to detect patterns in the naming convention of the company email
+- Find First and Last names
+- Check on the page, HTTP responses
 ### Username enumeration via the website's mechanism
 - Registration Forms
 - Login Page
