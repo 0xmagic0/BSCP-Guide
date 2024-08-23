@@ -2,6 +2,7 @@
 - [Insecure Deserilization Playlist - Emanuele Picariello](https://www.youtube.com/playlist?list=PL16wrrijM0H-v1GBbBWYSxSq8-2WC3rBM)
 # Extensions & Tools
 - [ysoserial](https://github.com/frohoff/ysoserial)
+- Java Deserialization Scanner
 - [PHPGGC](https://github.com/ambionics/phpggc)
 - Hackvertor
 # Types of serialization
