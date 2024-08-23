@@ -16,13 +16,6 @@
 - **Cache-buster:**
     - Cached responses can mask unkeyed inputs.
     - Cache-busters are used during manual testing to detect and explore vulnerable requests. `Param Miner` can help with this.
-# Methodology
-- Find a request that functions as a cache oracle. Add cache buster
-- Identify unkeyed inputs. This is where the payload will be injected. (Burp Suite extension `Param Miner` can be used to automate it).
-- Assess how much damage could be done. The potential impact.
-- Inject into cache.
-- If that fails, gain a better understanding of how the cache works and find a cacheable target page.
-- Retry.
 # Possible factors that affect a page being cached
 - File extension
 - Content-type
@@ -65,11 +58,30 @@ Origin
         - Accept header: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,text/cachebuster-asdfa
         - Accept-Encoding header: gzip, deflate, br, cachebuster-asdfa
 3. Identify an exploitable gadget
-    - Unkeyed port
+    - Unkeyed header
+        - Use Param Miner "Guess Headers"
+    - Multiple headers
+        - Use Param Miner "Guess Headers" multiple times
+        - Find a suitable request to poison to trigger the XSS (JS file)
+    - Unkeyed unknown header
+        - Use Param Miner "Guess Headers"
+        - Look at the Vary response header
+        - Find the user-agent of the victim
+    - Unkeyed cookie
     - Unkeyed query string 
-    - Unkeyed query parameters: the `utm_` parameters such as utm_content are good to try. Use Param Miner's "Guess GET Parameter" scan to find useful parameters
+        - Since the query string is unkeyed, find an alternative cache-buster
+    - Unkeyed query parameters
+        - The query string is part of the cache key, but we might be able to find a query parameter that is not part of the cache key
+        - Use Param Miner's "Guess GET Parameter" scan to find an unkeyed parameter
+        - The `utm_` parameters such as utm_content are good to try
     - Cache parameter cloaking
-    - Fat GET request: Get requests with a body. This could also be accomplished with a HTTP method override `X-HTTP-Method-Override: POST`
-    - Normalized cache keys 
-    - Cache key injection 
-    - Internal cache poisoning 
+        - Mix with parameter pollution
+        - Use `;` as a parameter separator to check how it is being parsed
+        - Find an unkeyed parameter
+            - Use Param Miner's "Guess GET Parameter" scan to find an unkeyed parameter
+    - Fat GET request
+        - Get request with a body
+        - Mix with parameter pollution. Send the parameter as part of the body of the request
+    - URL normalization 
+        - The path is url decoded before being injected it to the cache
+        - Inject an XSS payload via Burp and poison the cache
