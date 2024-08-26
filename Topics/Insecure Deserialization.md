@@ -61,23 +61,21 @@ i:0 == s:4:"aaaa" -> 0 == "aaaa" //evaluates to true
 - **ysoserial** is an example of such tools to be used for Java deserialization
 
 - [thread in github to solve java17> issue](https://github.com/frohoff/ysoserial/issues/203)
-Version 1
-```bash
-java -jar ysoserial-all.jar \
-   --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.trax=ALL-UNNAMED \
-   --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.runtime=ALL-UNNAMED \
-   --add-opens=java.base/java.net=ALL-UNNAMED \
-   --add-opens=java.base/java.util=ALL-UNNAMED \
-   [payload] '[command]'
-```
-Version 2 
-```bash
-java \
- --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.trax=ALL-UNNAMED\
- --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.runtime=ALL-UNNAMED\
- --add-opens=java.base/sun.reflect.annotation=ALL-UNNAMED\
- -jar ./ysoserial.jar <payload> <command>
-```
+   - In case that there are issue with the java version being used use the following command
+      ```bash
+      sudo apt update -y 
+      sudo apt install openjdk-11-jdk
+      sudo update-alternatives --config java
+      ```
+   - Select java 11. Check the version with
+      ```bash
+      java --version
+      ```
+   - To revert to the original java version simply re-run the command below and select the original java version
+      ```bash
+      sudo update-alternatives --config java
+      ```
+
 - Base64 encode the payload piping the output to `base64 -w 0`
    - For MacOS use the `gbase64` command which accepts the -w flag
 
