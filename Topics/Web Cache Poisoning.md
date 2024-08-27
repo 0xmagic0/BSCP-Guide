@@ -85,3 +85,7 @@ Origin
     - URL normalization 
         - The path is url decoded before being injected it to the cache
         - Inject an XSS payload via Burp and poison the cache
+    - Web cache poisoning via ambiguous requests
+        - Add cache buster. Send double host headers
+        - Observe how the server handles this additional header
+        - Craft payload and poison the cache
