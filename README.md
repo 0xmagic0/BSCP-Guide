@@ -42,3 +42,6 @@ Burp Suite Certified Practitioner Guide.
 - [WebSocket](/Topics/WebSocket.md)
 - [XSS](/Topics/XSS.md)
 - [XXE](/Topics/XXE.md)
+
+## Practice Exam Payloads
+- [Practice Exam Payloads and Resources](/Payloads-Practice-Exam.md)
