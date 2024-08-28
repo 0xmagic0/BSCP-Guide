@@ -75,9 +75,16 @@ i:0 == s:4:"aaaa" -> 0 == "aaaa" //evaluates to true
       ```bash
       sudo update-alternatives --config java
       ```
-
+- Command
+```bash
+java -jar ysoserial-all.jar [payload] "command"
+```
 - Base64 encode the payload piping the output to `base64 -w 0`
    - For MacOS use the `gbase64` command which accepts the -w flag
+
+```bash
+java -jar ysoserial-all.jar [payload] "command" | base64 -w 0
+```
 
 - These gadget chains can also be used for detection
    - URLDNS: Use it to make a DNS Lookup request to a supplied URL
