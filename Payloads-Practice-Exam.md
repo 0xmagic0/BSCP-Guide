@@ -5,6 +5,7 @@
 - [ChrisM-X/PortSwigger-Academy-CheatSheets](https://github.com/ChrisM-X/PortSwigger-Academy-CheatSheets/tree/master/_Prepare%20For%20Burp%20Suite%20Exam)
 - [pawlokk/burp-exam-notes/blob/main/methodology.txt](https://github.com/pawlokk/burp-exam-notes/blob/main/methodology.txt)
 - [bscpcheatsheet.gitbook.io/exam](https://bscpcheatsheet.gitbook.io/exam)
+- [Notes template](https://www.y-security.de/news-en/looking-at-the-portswigger-burp-suite-certification/index.html)
 # More extensions
 Quick detection - Scan Manual insertion point https://portswigger.net/bappstore/ca7ee4e746b54514a0ca5059329e926f
 # Payload processing
