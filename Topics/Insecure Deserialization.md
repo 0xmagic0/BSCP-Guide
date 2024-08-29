@@ -61,7 +61,7 @@ i:0 == s:4:"aaaa" -> 0 == "aaaa" //evaluates to true
 - **ysoserial** is an example of such tools to be used for Java deserialization
 
 - [thread in github to solve java17> issue](https://github.com/frohoff/ysoserial/issues/203)
-   - In case that there are issue with the java version being used use the following command
+   - In case that there are issue with the java version being used use the following commands for Linux
       ```bash
       sudo apt update -y 
       sudo apt install openjdk-11-jdk
@@ -75,7 +75,11 @@ i:0 == s:4:"aaaa" -> 0 == "aaaa" //evaluates to true
       ```bash
       sudo update-alternatives --config java
       ```
-- Command
+   - For MacOS use the links provided below
+      - [Step-by-Step Guide: Installing and Switching Java Versions on Mac OSX](https://medium.com/@haroldfinch01/step-by-step-guide-installing-and-switching-java-versions-on-mac-osx-f3896b9872f4)
+      - [Installing different versions of open jdk through Homebrew](https://gist.github.com/gramcha/81dcec3f1e4ce8cffd7f248d3e2a42a7)
+
+- Ysoserial Command
 ```bash
 java -jar ysoserial-all.jar [payload] "command"
 ```
