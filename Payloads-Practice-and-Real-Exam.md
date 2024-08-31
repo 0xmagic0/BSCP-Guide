@@ -2,10 +2,6 @@
 - [botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study/](https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study/blob/main/README.md)
 - [DingyShark/BurpSuiteCertifiedPractitioner](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner?tab=readme-ov-file)
 - [micahvandeusen - burp-suite-certified-practitioner-exam-review](https://micahvandeusen.com/burp-suite-certified-practitioner-exam-review/)
-- [ChrisM-X/PortSwigger-Academy-CheatSheets](https://github.com/ChrisM-X/PortSwigger-Academy-CheatSheets/tree/master/_Prepare%20For%20Burp%20Suite%20Exam)
-- [pawlokk/burp-exam-notes/blob/main/methodology.txt](https://github.com/pawlokk/burp-exam-notes/blob/main/methodology.txt)
-- [bscpcheatsheet.gitbook.io/exam](https://bscpcheatsheet.gitbook.io/exam)
-- [Notes template](https://www.y-security.de/news-en/looking-at-the-portswigger-burp-suite-certification/index.html)
 # Payload processing
 - [Obfuscating attacks using encodings](https://portswigger.net/web-security/essential-skills/obfuscating-attacks-using-encodings)
 # Web Cache
