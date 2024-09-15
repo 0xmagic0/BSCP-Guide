@@ -10,7 +10,6 @@
 - [Don't make this recon mistakes](https://www.youtube.com/watch?v=YbIEXJhZxUk)
 - [HackingHub](https://app.hackinghub.io/)
 - [Turbo Intruder](https://portswigger.net/research/turbo-intruder-embracing-the-billion-request-attack)
-- [Bruteforcing with the Wrong Wordlist is a Waste of time!](https://www.linkedin.com/posts/florian-ethical-hacker_penetrationtesting-security-cybersecurity-activity-7118608765918035968-yVZo/)
 
 
 # Basic Recon
